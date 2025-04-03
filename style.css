@@ -327,10 +327,6 @@ ul {
   border: none;
   border-bottom: 1px solid black;
 }
-/* .accordion .accordion-item:first-of-type .accordion-button {
-  border-top-left-radius: 37px;
-  border-top-right-radius: 37px;
-} */
 .accordion .accordion-body {
   background-color: #fbfbfb;
   font-size: 21px;
@@ -363,6 +359,92 @@ ul {
 
 .accordion .accordion-button[aria-expanded="true"]::after {
   transform: rotate(180deg);
+}
+.modal .modal-dialog {
+  max-width: 60%;
+}
+.modal-dialog .modal-content {
+  border-radius: 5px;
+}
+.modal-content .modal-header {
+  border-bottom: none;
+  padding: 10px;
+}
+.popup-title h3 {
+  color: #489351;
+  font-size: 1.55rem;
+}
+.popup-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 50px 0;
+}
+.popup-wrapper .left-content,
+.popup-wrapper .right-content {
+  flex: 1;
+  padding: 10px;
+  position: relative;
+}
+.left-content .wpb_single_image {
+  margin-bottom: 35px;
+}
+.wpb_single_image .image-wrap {
+  display: flex;
+  justify-content: center;
+}
+.wpb_single_image .image-wrap img{
+  height: 80px;
+}
+.popup-wrapper .right-content {
+  max-width: 100%;
+}
+.content-box {
+  border: 1px solid #489351;
+  padding: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  position: relative;
+  margin: 0 auto;
+  min-height: 150px;
+}
+.content-box .content {
+  padding: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+.content-box button {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #489351;
+  padding: 10px 15px;
+  color: white;
+  width: 200px;
+}
+.popup-wrapper .review-section {
+  margin-top: 30px;
+}
+.separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  margin: 0 10px;
+  font-weight: 600;
+}
+.separator::before,
+.separator::after {
+  content: "";
+  height: 200px;
+  width: 1px;
+  background-color: black;
+  margin: 5px 0;
 }
 .footer-bg {
   background: #489351 !important;
