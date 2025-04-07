@@ -374,18 +374,22 @@ ul {
   color: #489351;
   font-size: 1.55rem;
 }
-.popup-wrapper {
+/* .popup-wrapper {
   display: flex;
   justify-content: center;
   position: relative;
   margin: 50px 0;
-}
-.popup-wrapper .left-content,
+} */
+/* .popup-wrapper .left-content,
 .popup-wrapper .right-content {
+  width: 50%;
+} */
+
+/* .popup-wrapper .left-content .popup-wrapper .right-content {
   flex: 1;
   padding: 10px;
   position: relative;
-}
+} */
 .left-content .wpb_single_image {
   margin-bottom: 35px;
 }
@@ -393,7 +397,7 @@ ul {
   display: flex;
   justify-content: center;
 }
-.wpb_single_image .image-wrap img{
+.wpb_single_image .image-wrap img {
   height: 80px;
 }
 .popup-wrapper .right-content {
@@ -428,6 +432,9 @@ ul {
 .popup-wrapper .review-section {
   margin-top: 30px;
 }
+.popup-wrapper .review-section img {
+  height: 118px;
+}
 .separator {
   display: flex;
   flex-direction: column;
@@ -446,6 +453,167 @@ ul {
   background-color: black;
   margin: 5px 0;
 }
+.funnel-btn {
+  color: #fff;
+  min-width: 272px;
+  height: 56px;
+  background-color: #489351;
+  font-weight: 700;
+  border: 3px solid;
+  border-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  /* transition: all ease-in-out; */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.funnel-btn:hover {
+  color: #489351;
+  border-color: #489351;
+  background-color: #fff;
+}
+.funnel form h3 {
+  color: #489351;
+  font-size: 22px;
+}
+.funnel .card {
+  height: 500px;
+}
+.form-label {
+  color: #489351;
+  /* font-size: 14px; */
+}
+.form-control {
+  padding: 12px !important;
+  max-width: 400px !important;
+  width: 100% !important;
+}
+
+.funnel .progress-completion {
+  display: flex;
+  color: #b5bac0;
+  background-color: #fff;
+  box-shadow: 0px 4px 46px 0px rgba(52, 130, 235, 0.24);
+  border-radius: 40px;
+  margin: 0 auto 30px;
+  text-align: left;
+  max-width: 202px;
+  height: 60px;
+  padding: 19px 62px 19px 27px;
+  position: relative;
+  overflow: hidden;
+}
+.funnel .completion__progress-meter {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.funnel svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 58px;
+  width: 58px;
+  overflow: visible !important;
+}
+
+.progress-meter-bar,
+.progress-meter-progress {
+  fill: none;
+  stroke-width: 3;
+}
+
+.progress-meter-bar {
+  stroke: #e0e0e0;
+}
+
+.progress-meter-progress {
+  stroke: #489351;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 0.4s ease;
+}
+
+.funnel .lp-completion-rate {
+  color: #489351;
+  display: flex;
+  flex-float: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 4;
+}
+.step {
+  display: none;
+  animation: fade 0.5s ease-in-out;
+  height: 100%;
+}
+.spacing {
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.select2-container .select2-selection--single {
+  height: 40px !important;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 40px !important;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  top: 8px !important;
+}
+.spacing .btn-checked {
+  width: 300px;
+  border: 1px solid #489351;
+  color: #489351;
+  font-weight: bold;
+}
+.spacing .btn-checked:hover{
+  width: 300px;
+  background-color: #489351;
+  color: white;
+  font-weight: bold;
+}
+.step .third-step-wrapper {
+  padding: 0 5px;
+  height: 360px;
+  background-color: white;
+  overflow-y: auto;
+}
+.step .form-check-input:checked {
+  background-color: #489351;
+  border-color: #489351;
+}
+.step.active {
+  display: block;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .footer-bg {
   background: #489351 !important;
 }
