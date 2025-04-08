@@ -15,6 +15,11 @@
       href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
   </head>
   <body>
     <div class="top">
@@ -1791,26 +1796,9 @@
               </p>
             </div>
             <div class="container popup-wrapper">
-              <!-- <div class="left-content">
-                <div class="wpb_single_image">
-                  <div class="image-wrap">
-                    <img src="images/logo.webp" alt="" />
-                  </div>
-                </div>
-                <div class="content-box">
-                  <div class="content">
-                    Hire Smarter and Faster with 1 Week risk free trail.
-                  </div>
-                  <p><button>BOOK CONSULTATION</button></p>
-                </div>
-                <div class="review-section">
-                  <img decoding="async" src="images/review-icons-image.png" />
-                </div>
-              </div>
-              <div class="separator">OR</div> -->
               <div class="right-content">
                 <div class="funnel">
-                  <div class="card shadow p-4" style="border-radius: 15px">
+                  <div style="height: 530px">
                     <form
                       id="multiStepForm"
                       onsubmit="event.preventDefault();"
@@ -1863,7 +1851,7 @@
                                       type="radio"
                                       name="developerType"
                                       class="d-none"
-                                      onclick="nextStep()"
+                                      onclick="handleDeveloperTypeSelection(this)"
                                     />
                                     <span>Full Stack Web Developer</span>
                                   </label>
@@ -1872,7 +1860,7 @@
                                       type="radio"
                                       name="developerType"
                                       class="d-none"
-                                      onclick="nextStep()"
+                                      onclick="handleDeveloperTypeSelection(this)"
                                     />
                                     <span
                                       >Frontend Developer (React, Vue, Angular
@@ -1884,7 +1872,7 @@
                                       type="radio"
                                       name="developerType"
                                       class="d-none"
-                                      onclick="nextStep()"
+                                      onclick="handleDeveloperTypeSelection(this)"
                                     />
                                     <span
                                       >Backend Developer (Node.js, Laravel,
@@ -1896,7 +1884,7 @@
                                       type="radio"
                                       name="developerType"
                                       class="d-none"
-                                      onclick="nextStep()"
+                                      onclick="handleDeveloperTypeSelection(this)"
                                     />
                                     <span
                                       >Mobile App Developer (Flutter, React
@@ -1908,7 +1896,7 @@
                                       type="radio"
                                       name="developerType"
                                       class="d-none"
-                                      onclick="nextStep()"
+                                      onclick="handleDeveloperTypeSelection(this)"
                                     />
                                     <span>AI/ML Developer</span>
                                   </label>
@@ -1917,7 +1905,7 @@
                                       type="radio"
                                       name="developerType"
                                       class="d-none"
-                                      onclick="selectOption(this)"
+                                      onclick="handleDeveloperTypeSelection(this)"
                                     />
                                     <span>Other (Custom Needs)</span>
                                   </label>
@@ -1937,21 +1925,10 @@
                                 </div>
                               </div>
                             </div>
-                            <!-- <div class="d-flex justify-content-center mt-4">
-                              <button class="funnel-btn" onclick="nextStep()">
-                                Next
-                              </button>
-                            </div> -->
                           </div>
                           <div
                             class="d-flex justify-content-center align-items-center mb-2"
                           >
-                            <!-- <a
-                              href="javascript:void(0)"
-                              class="text-decoration-none text-primary"
-                              onclick="prevStep()"
-                              >← Back</a
-                            > -->
                             <div
                               class="d-flex justify-content-center align-items-center"
                             >
@@ -1997,18 +1974,48 @@
                         </div>
                         <div class="spacing">
                           <div>
-                            <h2 class="text-center">What's your full name?</h2>
+                            <h2 class="text-center">
+                              What Hiring Model you want to choose ?
+                            </h2>
                             <div class="d-flex justify-content-center mt-3">
-                              <input
-                                type="text"
-                                placeholder="Enter Your First & Last Name"
-                                class="form-control"
-                              />
-                            </div>
-                            <div class="d-flex justify-content-center mt-4">
-                              <button class="funnel-btn" onclick="nextStep()">
-                                Next
-                              </button>
+                              <div class="d-grid gap-2 px-4">
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="hiringType"
+                                    class="d-none"
+                                    onclick="nextStep()"
+                                  />
+                                  <span>Hourly</span>
+                                </label>
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="hiringType"
+                                    class="d-none"
+                                    onclick="nextStep()"
+                                  />
+                                  <span>Part-Time (Weekly)</span>
+                                </label>
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="hiringType"
+                                    class="d-none"
+                                    onclick="nextStep()"
+                                  />
+                                  <span>Full-Time (Monthly)</span>
+                                </label>
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="hiringType"
+                                    class="d-none"
+                                    onclick="nextStep()"
+                                  />
+                                  <span>Project-Based (Fixed Price)</span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                           <div
@@ -2067,19 +2074,341 @@
                         <div class="spacing">
                           <div>
                             <h2 class="text-center">
-                              What's your email address?
+                              What's Your Expected Budget?
+                            </h2>
+                            <div class="d-flex justify-content-center gap-3">
+                              <label class="hourly-radio">
+                                <input
+                                  type="radio"
+                                  value="hourly"
+                                  name="billingType"
+                                  onchange="toggleBudgetOptions()"
+                                  checked
+                                />
+                                <h3 class="text-center">Hourly</h3>
+                              </label>
+                              <label class="monthly-radio">
+                                <input
+                                  type="radio"
+                                  value="monthly"
+                                  name="billingType"
+                                  onchange="toggleBudgetOptions()"
+                                />
+                                <h3 class="text-center">Monthly</h3>
+                              </label>
+                            </div>
+                            <div id="hourlyBudgetOptions">
+                              <div class="d-flex justify-content-center mt-3">
+                                <div class="d-grid gap-2 px-4">
+                                  <label class="btn-radio">
+                                    <input
+                                      type="radio"
+                                      name="budget"
+                                      class="d-none"
+                                      onclick="handleOptionSelect('hourly')"
+                                      data-value="10-20"
+                                    />
+                                    <span>$10 - $20</span>
+                                  </label>
+                                  <label class="btn-radio">
+                                    <input
+                                      type="radio"
+                                      name="budget"
+                                      class="d-none"
+                                      onclick="handleOptionSelect('hourly')"
+                                      data-value="20-40"
+                                    />
+                                    <span>$20 - $40</span>
+                                  </label>
+                                  <label class="btn-radio">
+                                    <input
+                                      type="radio"
+                                      name="budget"
+                                      class="d-none"
+                                      onclick="handleOptionSelect('hourly')"
+                                      data-value="40-60"
+                                    />
+                                    <span>$40 - $60</span>
+                                  </label>
+                                  <label class="btn-radio">
+                                    <input
+                                      type="radio"
+                                      name="budget"
+                                      class="d-none"
+                                      onclick="handleCustomSelect('hourly')"
+                                      data-value="custom"
+                                    />
+                                    <span>Custom</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div
+                                id="hourlyCustomInput"
+                                class="text-center mt-2"
+                                style="display: none"
+                              >
+                                <input
+                                  type="number"
+                                  id="hourlyCustomValue"
+                                  class="form-control w-50 mx-auto"
+                                  placeholder="Enter custom hourly rate"
+                                />
+                              </div>
+                            </div>
+
+                            <div
+                              id="monthlyBudgetOptions"
+                              style="display: none"
+                            >
+                              <div class="d-flex justify-content-center mt-3">
+                                <div class="d-grid gap-2 px-4">
+                                  <label class="btn-radio">
+                                    <input
+                                      type="radio"
+                                      name="budget"
+                                      class="d-none"
+                                      onclick="handleOptionSelect('monthly')"
+                                      data-value="2000-4000"
+                                    />
+                                    <span>$2,000 - $4,000</span>
+                                  </label>
+                                  <label class="btn-radio">
+                                    <input
+                                      type="radio"
+                                      name="budget"
+                                      class="d-none"
+                                      onclick="handleOptionSelect('monthly')"
+                                      data-value="4000-6000"
+                                    />
+                                    <span>$4,000 - $6,000</span>
+                                  </label>
+                                  <label class="btn-radio">
+                                    <input
+                                      type="radio"
+                                      name="budget"
+                                      class="d-none"
+                                      onclick="handleCustomSelect('monthly')"
+                                      data-value="custom"
+                                    />
+                                    <span>Custom</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div
+                                id="monthlyCustomInput"
+                                class="text-center mt-2"
+                                style="display: none"
+                              >
+                                <input
+                                  type="number"
+                                  id="monthlyCustomValue"
+                                  class="form-control w-50 mx-auto"
+                                  placeholder="Enter custom monthly budget"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center mb-2"
+                          >
+                            <a
+                              href="javascript:void(0)"
+                              class="text-decoration-none text-primary"
+                              onclick="prevStep()"
+                              >← Back</a
+                            >
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                            >
+                              <img src="images/lock.png" height="20" alt="" />
+                              <p class="d-block text-muted text-center mt-3">
+                                Privacy & Security Guaranteed
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step">
+                        <div class="d-flex justify-content-center">
+                          <div class="progress-completion">
+                            <span class="text-muted me-2">Completion</span>
+                            <div class="lp-completion__progress-meter">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 34 34"
+                              >
+                                <circle
+                                  cx="17"
+                                  cy="17"
+                                  r="15.5"
+                                  class="progress-meter-bar"
+                                ></circle>
+                                <circle
+                                  id="js-countdown__progress"
+                                  cx="17"
+                                  cy="17"
+                                  r="15.5"
+                                  class="progress-meter-progress js-countdown__progress"
+                                  style="
+                                    visibility: visible;
+                                    stroke-dashoffset: 100px;
+                                  "
+                                  stroke-linecap="round"
+                                ></circle>
+                              </svg>
+                              <span class="lp-completion-rate"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spacing">
+                          <div>
+                            <h2 class="text-center">
+                              When Do You Want to Start?
                             </h2>
                             <div class="d-flex justify-content-center mt-3">
-                              <input
-                                type="text"
-                                placeholder="name@email.com"
-                                class="form-control"
-                              />
+                              <div class="d-grid gap-2 px-4">
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="stating"
+                                    class="d-none"
+                                    onclick="nextStep()"
+                                  />
+                                  <span>ASAP</span>
+                                </label>
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="stating"
+                                    class="d-none"
+                                    onclick="nextStep()"
+                                  />
+                                  <span>In 1-2 Weeks</span>
+                                </label>
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="stating"
+                                    class="d-none"
+                                    onclick="nextStep()"
+                                  />
+                                  <span>In 1 Month</span>
+                                </label>
+                              </div>
                             </div>
-                            <div class="d-flex justify-content-center mt-4">
-                              <button class="funnel-btn" onclick="nextStep()">
-                                Next
-                              </button>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center mb-2"
+                          >
+                            <a
+                              href="javascript:void(0)"
+                              class="text-decoration-none text-primary"
+                              onclick="prevStep()"
+                              >← Back</a
+                            >
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                            >
+                              <img src="images/lock.png" height="20" alt="" />
+                              <p class="d-block text-muted text-center mt-3">
+                                Privacy & Security Guaranteed
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step">
+                        <div class="d-flex justify-content-center">
+                          <div class="progress-completion">
+                            <span class="text-muted me-2">Completion</span>
+                            <div class="lp-completion__progress-meter">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 34 34"
+                              >
+                                <circle
+                                  cx="17"
+                                  cy="17"
+                                  r="15.5"
+                                  class="progress-meter-bar"
+                                ></circle>
+                                <circle
+                                  id="js-countdown__progress"
+                                  cx="17"
+                                  cy="17"
+                                  r="15.5"
+                                  class="progress-meter-progress js-countdown__progress"
+                                  style="
+                                    visibility: visible;
+                                    stroke-dashoffset: 100px;
+                                  "
+                                  stroke-linecap="round"
+                                ></circle>
+                              </svg>
+                              <span class="lp-completion-rate"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="spacing">
+                          <div>
+                            <h2 class="text-center">
+                              How mane developers you want to Hire?
+                            </h2>
+                            <div class="d-flex justify-content-center mt-3">
+                              <div class="d-grid gap-2 px-4">
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="hireDevelopers"
+                                    class="d-none"
+                                    onclick="handleDeveloperSelection(this)"
+                                  />
+                                  <span>01 to 5</span>
+                                </label>
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="hireDevelopers"
+                                    class="d-none"
+                                    onclick="handleDeveloperSelection(this)"
+                                  />
+                                  <span>06 to 10</span>
+                                </label>
+                                <label class="btn-radio">
+                                  <input
+                                    type="radio"
+                                    name="hireDevelopers"
+                                    class="d-none"
+                                    onclick="handleDeveloperSelection(this)"
+                                  />
+                                  <span>11 +</span>
+                                </label>
+                                <label
+                                  class="btn-radio"
+                                  id="customDeveloperOption"
+                                >
+                                  <input
+                                    type="radio"
+                                    name="hireDevelopers"
+                                    class="d-none"
+                                    onclick="handleDeveloperSelection(this)"
+                                  />
+                                  <span>Custom</span>
+                                </label>
+                                <div
+                                  id="customDeveloperInput"
+                                  class="mt-2"
+                                  style="display: none"
+                                >
+                                  <input
+                                    type="number"
+                                    class="form-control"
+                                    placeholder="Enter custom number of developers"
+                                    id="customDeveloperCount"
+                                    min="1"
+                                  />
+                                </div>
+                              </div>
                             </div>
                           </div>
                           <div
@@ -2140,11 +2469,12 @@
                               What's your phone number?
                             </h2>
                             <div class="d-flex justify-content-center mt-3">
-                              <input
+                              <!-- <input
                                 type="number"
                                 placeholder="Enter Your Phone Number"
                                 class="form-control"
-                              />
+                              /> -->
+                              <input type="number" placeholder="Enter Your Phone Number" style="padding-left: 89px;" id="country_code" class="form-control">
                             </div>
                             <div class="d-flex justify-content-center mt-4">
                               <button class="funnel-btn" onclick="nextStep()">
@@ -2242,7 +2572,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="step">
+                      <!-- <div class="step">
                         <div class="d-flex justify-content-center">
                           <div class="progress-completion">
                             <span class="text-muted me-2">Completion</span>
@@ -2490,101 +2820,7 @@
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="spacing">
-                          <div>
-                            <h2 class="text-center">
-                              What Type of Developers Do You Need?
-                            </h2>
-                            <div
-                              class="d-flex justify-content-center flex-column mt-3"
-                            >
-                              <h3 class="text-center">Full Stack Developer</h3>
-                              <div class="d-flex justify-content-center">
-                                <div class="form-check form-check-inline">
-                                  <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="option"
-                                    id="option1"
-                                    value="option1"
-                                  />
-                                </div>
-                                <label class="form-check-label" for="option1">
-                                  Yes
-                                </label>
-                                <div class="form-check form-check-inline ms-3">
-                                  <input
-                                    class="form-check-input"
-                                    type="radio"
-                                    name="option"
-                                    id="option2"
-                                    value="option2"
-                                  />
-                                </div>
-                                <label class="form-check-label" for="option2">
-                                  No
-                                </label>
-                              </div>
-                            </div>
-                            <div class="d-flex justify-content-center mt-4">
-                              <button class="funnel-btn" onclick="nextStep()">
-                                Next
-                              </button>
-                            </div>
-                          </div>
-                          <div
-                            class="d-flex justify-content-between align-items-center mb-2"
-                          >
-                            <a
-                              href="javascript:void(0)"
-                              class="text-decoration-none text-primary"
-                              onclick="prevStep()"
-                              >← Back</a
-                            >
-                            <div
-                              class="d-flex justify-content-center align-items-center"
-                            >
-                              <img src="images/lock.png" height="20" alt="" />
-                              <p class="d-block text-muted text-center mt-3">
-                                Privacy & Security Guaranteed
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      </div> -->
                     </form>
                   </div>
                 </div>
@@ -2598,21 +2834,53 @@
     <script>
       let currentStep = 0;
       let selectedOption = null;
-      function selectOption(element) {
+      let selectedDeveloperCount = null;
+
+      function handleDeveloperTypeSelection(element) {
+        document.querySelectorAll(".btn-radio").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        element.closest(".btn-radio").classList.add("active");
+        const isOtherOption =
+          element.closest(".btn-radio").id === "otherOption";
+        const customInput = document.getElementById("customNeedsInput");
+        const customText = document.getElementById("customNeedsText");
+
+        if (isOtherOption) {
+          customInput.style.display = "block";
+          selectedOption = "Other (Custom Needs)";
+        } else {
+          customInput.style.display = "none";
+          customText.value = "";
+          selectedOption = element.closest(".btn-radio").textContent.trim();
+          nextStep();
+        }
+      }
+
+      function handleDeveloperSelection(element) {
         document.querySelectorAll(".btn-radio").forEach((btn) => {
           btn.classList.remove("active");
         });
 
         element.closest(".btn-radio").classList.add("active");
 
-        selectedOption = element.closest(".btn-radio").textContent.trim();
-
-        const customInput = document.getElementById("customNeedsInput");
-        if (element.closest(".btn-radio").id === "otherOption") {
+        const customInput = document.getElementById("customDeveloperInput");
+        const customValueInput = document.getElementById(
+          "customDeveloperCount"
+        );
+        const isCustomOption =
+          element.closest(".btn-radio").id === "customDeveloperOption";
+        if (isCustomOption) {
           customInput.style.display = "block";
+          selectedDeveloperCount = null;
         } else {
           customInput.style.display = "none";
-          document.getElementById("customNeedsText").value = "";
+          customValueInput.value = "";
+          selectedDeveloperCount = element
+            .closest(".btn-radio")
+            .querySelector("span")
+            .textContent.trim();
+          nextStep();
         }
       }
 
@@ -2624,8 +2892,6 @@
         const radius = 15.5;
         const circumference = 2 * Math.PI * radius;
         const offset = circumference - (percentage / 100) * circumference;
-
-        // Update all progress bars and percentage text
         document
           .querySelectorAll(".progress-meter-progress")
           .forEach((circle) => {
@@ -2648,7 +2914,7 @@
           $(".step.active .js-select2").select2({
             placeholder: "Select a country",
             allowClear: true,
-            dropdownParent: $(".step.active"), // This ensures dropdown renders inside visible step
+            dropdownParent: $(".step.active"),
           });
         }, 50);
       }
@@ -2664,6 +2930,15 @@
             .getElementById("customNeedsText")
             .value.trim();
         }
+        if (
+          document.getElementById("customDeveloperCount") &&
+          document.getElementById("customDeveloperInput").style.display ===
+            "block"
+        ) {
+          selectedDeveloperCount = document
+            .getElementById("customDeveloperCount")
+            .value.trim();
+        }
       }
 
       function prevStep() {
@@ -2675,6 +2950,50 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         showStep(currentStep);
+        toggleBudgetOptions();
+      });
+
+      function toggleBudgetOptions() {
+        const billingType = document.querySelector(
+          'input[name="billingType"]:checked'
+        ).value;
+        const hourlyOptions = document.getElementById("hourlyBudgetOptions");
+        const monthlyOptions = document.getElementById("monthlyBudgetOptions");
+
+        if (billingType === "hourly") {
+          hourlyOptions.style.display = "block";
+          monthlyOptions.style.display = "none";
+        } else {
+          hourlyOptions.style.display = "none";
+          monthlyOptions.style.display = "block";
+        }
+      }
+      function handleOptionSelect(type) {
+        if (type === "hourly") {
+          document.getElementById("hourlyCustomValue").value = "";
+          document.getElementById("hourlyCustomInput").style.display = "none";
+        } else if (type === "monthly") {
+          document.getElementById("monthlyCustomValue").value = "";
+          document.getElementById("monthlyCustomInput").style.display = "none";
+        }
+        nextStep();
+      }
+
+      function handleCustomSelect(type) {
+        document.getElementById("hourlyCustomInput").style.display = "none";
+        document.getElementById("monthlyCustomInput").style.display = "none";
+        if (type === "hourly") {
+          document.getElementById("hourlyCustomInput").style.display = "block";
+        } else if (type === "monthly") {
+          document.getElementById("monthlyCustomInput").style.display = "block";
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        window.intlTelInput(document.getElementById("country_code"), {
+          initialCountry: "in",
+          separateDialCode: true,
+          utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"
+        });
       });
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
