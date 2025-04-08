@@ -1817,37 +1817,134 @@
                       class="h-100"
                     >
                       <div class="step active">
-                        <img
-                          src="images/anoucement-funnel.png"
-                          class="mx-auto d-block mb-3"
-                        />
-                        <h3 class="fw-bold text-center">
-                          REQUEST MY DEMO & DIGITAL MARKETING ASSESSMENT NOW!
-                        </h3>
-                        <p class="text-center mt-2">
-                          Take just 30 seconds to answer some easy questions so
-                          that we can customize a personalized demo specifically
-                          for YOU.
-                        </p>
-                        <div class="d-flex justify-content-center mt-3">
-                          <button
-                            type="button"
-                            class="funnel-btn"
-                            onclick="nextStep()"
-                          >
-                            LET’S DO THIS!
-                          </button>
+                        <div class="d-flex justify-content-center">
+                          <div class="progress-completion">
+                            <span class="text-muted me-2">Completion</span>
+                            <div class="lp-completion__progress-meter">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 34 34"
+                              >
+                                <circle
+                                  cx="17"
+                                  cy="17"
+                                  r="15.5"
+                                  class="progress-meter-bar"
+                                ></circle>
+                                <circle
+                                  id="js-countdown__progress"
+                                  cx="17"
+                                  cy="17"
+                                  r="15.5"
+                                  class="progress-meter-progress js-countdown__progress"
+                                  style="
+                                    visibility: visible;
+                                    stroke-dashoffset: 100px;
+                                  "
+                                  stroke-linecap="round"
+                                ></circle>
+                              </svg>
+                              <span class="lp-completion-rate"></span>
+                            </div>
+                          </div>
                         </div>
-                        <div
-                          class="d-flex justify-content-center align-items-center"
-                        >
-                          <img src="images/lock.png" height="20" alt="" />
-                          <p class="d-block text-muted text-center mt-3">
-                            Privacy & Security Guaranteed
-                          </p>
+                        <div class="spacing">
+                          <div>
+                            <h2 class="text-center">
+                              What Type of Developers Do You Need?
+                            </h2>
+                            <div
+                              class="d-flex justify-content-center flex-column mt-3"
+                            >
+                              <!-- <h3 class="text-center">Frontend Developer</h3> -->
+
+                              <div class="d-flex justify-content-center">
+                                <div class="d-grid gap-2 px-4">
+                                  <button
+                                    type="button"
+                                    class="btn btn-checked"
+                                    onclick="nextStep()"
+                                  >
+                                    Full Stack Web Developer
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-checked"
+                                    onclick="nextStep()"
+                                  >
+                                    Frontend Developer (React, Vue, Angular etc)
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-checked"
+                                    onclick="nextStep()"
+                                  >
+                                    Backend Developer (Node.js, Laravel, Python,
+                                    etc.)
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-checked"
+                                    onclick="nextStep()"
+                                  >
+                                    Mobile App Developer (Flutter, React Native)
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-checked"
+                                    onclick="nextStep()"
+                                  >
+                                    AI/ML Developer
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-checked"
+                                    onclick="selectOption(this)"
+                                    id="otherOption"
+                                  >
+                                    Other (Custom Needs)
+                                  </button>
+                                  <div
+                                    id="customNeedsInput"
+                                    class="mt-2"
+                                    style="display: none"
+                                  >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Please specify your custom needs"
+                                      id="customNeedsText"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- <div class="d-flex justify-content-center mt-4">
+                              <button class="funnel-btn" onclick="nextStep()">
+                                Next
+                              </button>
+                            </div> -->
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center mb-2"
+                          >
+                            <a
+                              href="javascript:void(0)"
+                              class="text-decoration-none text-primary"
+                              onclick="prevStep()"
+                              >← Back</a
+                            >
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                            >
+                              <img src="images/lock.png" height="20" alt="" />
+                              <p class="d-block text-muted text-center mt-3">
+                                Privacy & Security Guaranteed
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-
                       <div class="step">
                         <div class="d-flex justify-content-center">
                           <div class="progress-completion">
@@ -2470,98 +2567,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="spacing">
-                          <div>
-                            <h2 class="text-center">
-                              What Type of Developers Do You Need?
-                            </h2>
-                            <div class="d-flex justify-content-center flex-column mt-3">
-                              <h3 class="text-center">Frontend Developer</h3>
-
-                            <div class="d-flex justify-content-center">
-                              <div class="d-grid gap-3 px-4">
-                                <button
-                                  type="button"
-                                  class="btn btn-checked"
-                                  onclick="nextStep()"
-                                >
-                                React
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-checked"
-                                  onclick="nextStep()"
-                                >
-                                Vue
-                                </button>
-                                <button
-                                  type="button"
-                                  class="btn btn-checked"
-                                  onclick="nextStep()"
-                                >
-                                Angular
-                                </button>
-                              </div>
-                            </div>
-                            </div>
-                            <!-- <div class="d-flex justify-content-center mt-4">
-                              <button class="funnel-btn" onclick="nextStep()">
-                                Next
-                              </button>
-                            </div> -->
-                          </div>
-                          <div
-                            class="d-flex justify-content-between align-items-center mb-2"
-                          >
-                            <a
-                              href="javascript:void(0)"
-                              class="text-decoration-none text-primary"
-                              onclick="prevStep()"
-                              >← Back</a
-                            >
-                            <div
-                              class="d-flex justify-content-center align-items-center"
-                            >
-                              <img src="images/lock.png" height="20" alt="" />
-                              <p class="d-block text-muted text-center mt-3">
-                                Privacy & Security Guaranteed
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </form>
                   </div>
                 </div>
@@ -2574,6 +2579,28 @@
 
     <script>
       let currentStep = 0;
+      let selectedOption = null;
+      function selectOption(button) {
+        // Remove active class from all buttons
+        document.querySelectorAll(".btn-checked").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        // Add active class to clicked button
+        button.classList.add("active");
+
+        // Store selected option
+        selectedOption = button.textContent.trim();
+
+        // Show/hide custom input
+        const customInput = document.getElementById("customNeedsInput");
+        if (button.id === "otherOption") {
+          customInput.style.display = "block";
+        } else {
+          customInput.style.display = "none";
+          document.getElementById("customNeedsText").value = "";
+        }
+      }
 
       function updateProgressBar() {
         const steps = document.querySelectorAll(".step");
@@ -2617,6 +2644,11 @@
         if (currentStep < steps.length - 1) {
           currentStep++;
           showStep(currentStep);
+        }
+        if (selectedOption === "Other (Custom Needs)") {
+          const customText = document
+            .getElementById("customNeedsText")
+            .value.trim();
         }
       }
 

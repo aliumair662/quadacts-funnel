@@ -476,7 +476,9 @@ ul {
   font-size: 22px;
 }
 .funnel .card {
-  height: 500px;
+  box-shadow: 0 3px 25px 10px rgb(152 138 138) !important;
+  background: #ffffff;
+  height: 650px;
 }
 .form-label {
   color: #489351;
@@ -581,12 +583,13 @@ ul {
   top: 8px !important;
 }
 .spacing .btn-checked {
+  font-size: 16px !important;
   width: 300px;
   border: 1px solid #489351;
   color: #489351;
   font-weight: bold;
 }
-.spacing .btn-checked:hover{
+.spacing .btn-checked:hover {
   width: 300px;
   background-color: #489351;
   color: white;
