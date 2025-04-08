@@ -1825,14 +1825,10 @@
                                   cy="17"
                                   r="15.5"
                                   class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
                                   stroke-linecap="round"
                                 ></circle>
                               </svg>
-                              <span class="lp-completion-rate"></span>
+                              <span class="lp-completion-rate">0%</span>
                             </div>
                           </div>
                         </div>
@@ -2546,11 +2542,11 @@
                                 class="form-control"
                               />
                             </div>
-                            <div class="d-flex justify-content-center mt-4">
+                            <!-- <div class="d-flex justify-content-center mt-4">
                               <button class="funnel-btn" onclick="nextStep()">
                                 Next
                               </button>
-                            </div>
+                            </div> -->
                           </div>
                           <div
                             class="d-flex justify-content-between align-items-center mb-2"
@@ -2887,7 +2883,7 @@
       function updateProgressBar() {
         const steps = document.querySelectorAll(".step");
         const totalSteps = steps.length;
-        const percentage = Math.round(((currentStep + 1) / totalSteps) * 100);
+        const percentage = Math.round((currentStep / (totalSteps - 1)) * 100);
 
         const radius = 15.5;
         const circumference = 2 * Math.PI * radius;
