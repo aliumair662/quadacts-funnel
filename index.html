@@ -1797,41 +1797,41 @@
             </div>
             <div class="container popup-wrapper">
               <div class="right-content">
-                <div class="funnel">
-                  <div style="height: 530px">
+                <div>
+                  <div class="funnel">
                     <form
                       id="multiStepForm"
                       onsubmit="event.preventDefault();"
                       class="h-100"
                     >
-                      <div class="step active">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate">0%</span>
-                            </div>
+                      <div class="d-flex justify-content-center">
+                        <div class="progress-completion">
+                          <span class="text-muted me-2">Completion</span>
+                          <div class="lp-completion__progress-meter">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 34 34"
+                            >
+                              <circle
+                                cx="17"
+                                cy="17"
+                                r="15.5"
+                                class="progress-meter-bar"
+                              ></circle>
+                              <circle
+                                id="js-countdown__progress"
+                                cx="17"
+                                cy="17"
+                                r="15.5"
+                                class="progress-meter-progress js-countdown__progress"
+                                stroke-linecap="round"
+                              ></circle>
+                            </svg>
+                            <span class="lp-completion-rate">0%</span>
                           </div>
                         </div>
+                      </div>
+                      <div class="step active">
                         <div class="spacing">
                           <div>
                             <h2 class="text-center">
@@ -1917,6 +1917,11 @@
                                       placeholder="Please specify your custom needs"
                                       id="customNeedsText"
                                     />
+                                    <small
+                                      class="text-muted d-block mt-1 text-center"
+                                      >Press Enter to proceed to the next
+                                      step</small
+                                    >
                                   </div>
                                 </div>
                               </div>
@@ -1937,37 +1942,6 @@
                         </div>
                       </div>
                       <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
-                            </div>
-                          </div>
-                        </div>
                         <div class="spacing">
                           <div>
                             <h2 class="text-center">
@@ -2036,37 +2010,6 @@
                       </div>
 
                       <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
-                            </div>
-                          </div>
-                        </div>
                         <div class="spacing">
                           <div>
                             <h2 class="text-center">
@@ -2149,6 +2092,11 @@
                                   class="form-control w-50 mx-auto"
                                   placeholder="Enter custom hourly rate"
                                 />
+                                <small
+                                  class="text-muted d-block mt-1 text-center"
+                                  >Press Enter to proceed to the next
+                                  step</small
+                                >
                               </div>
                             </div>
 
@@ -2201,6 +2149,11 @@
                                   class="form-control w-50 mx-auto"
                                   placeholder="Enter custom monthly budget"
                                 />
+                                <small
+                                  class="text-muted d-block mt-1 text-center"
+                                  >Press Enter to proceed to the next
+                                  step</small
+                                >
                               </div>
                             </div>
                           </div>
@@ -2225,37 +2178,6 @@
                         </div>
                       </div>
                       <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
-                            </div>
-                          </div>
-                        </div>
                         <div class="spacing">
                           <div>
                             <h2 class="text-center">
@@ -2314,41 +2236,10 @@
                         </div>
                       </div>
                       <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
-                            </div>
-                          </div>
-                        </div>
                         <div class="spacing">
                           <div>
                             <h2 class="text-center">
-                              How mane developers you want to Hire?
+                              How many developers you want to Hire?
                             </h2>
                             <div class="d-flex justify-content-center mt-3">
                               <div class="d-grid gap-2 px-4">
@@ -2359,7 +2250,7 @@
                                     class="d-none"
                                     onclick="handleDeveloperSelection(this)"
                                   />
-                                  <span>01 to 5</span>
+                                  <span>1 to 5</span>
                                 </label>
                                 <label class="btn-radio">
                                   <input
@@ -2368,7 +2259,7 @@
                                     class="d-none"
                                     onclick="handleDeveloperSelection(this)"
                                   />
-                                  <span>06 to 10</span>
+                                  <span>6 to 10</span>
                                 </label>
                                 <label class="btn-radio">
                                   <input
@@ -2403,6 +2294,11 @@
                                     id="customDeveloperCount"
                                     min="1"
                                   />
+                                  <small
+                                    class="text-muted d-block mt-1 text-center"
+                                    >Press Enter to proceed to the next
+                                    step</small
+                                  >
                                 </div>
                               </div>
                             </div>
@@ -2428,49 +2324,117 @@
                         </div>
                       </div>
                       <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
+                        <div class="spacing">
+                          <div>
+                            <h2 class="text-center">Enter Your Full Name</h2>
+                            <div class="d-flex justify-content-center mt-3">
+                              <input
+                                type="text"
+                                placeholder="Your Full Name"
+                                class="form-control"
+                                id="fullName"
+                              />
+                            </div>
+                            <div
+                              id="nameError"
+                              class="text-danger text-center mt-2"
+                              style="display: none"
+                            >
+                              Please enter your full name (first and last name)
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                              <button
+                                class="funnel-btn"
+                                onclick="validateName()"
                               >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
+                                Next
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center mb-2"
+                          >
+                            <a
+                              href="javascript:void(0)"
+                              class="text-decoration-none text-primary"
+                              onclick="prevStep()"
+                              >← Back</a
+                            >
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                            >
+                              <img src="images/lock.png" height="20" alt="" />
+                              <p class="d-block text-muted text-center mt-3">
+                                Privacy & Security Guaranteed
+                              </p>
                             </div>
                           </div>
                         </div>
+                      </div>
+                      <div class="step">
+                        <div class="spacing">
+                          <div>
+                            <h2 class="text-center">
+                              Enter Your Email Address
+                            </h2>
+                            
+                            <div class="d-flex justify-content-center mt-3">
+                              <input
+                                type="email"
+                                placeholder="Your Email Address"
+                                class="form-control"
+                                id="emailAddress"
+                              />
+                            </div>
+                            <div
+                              id="emailError"
+                              class="text-danger text-center mt-2"
+                              style="display: none"
+                            >
+                              Please enter a valid email address
+                            </div>
+                            <div class="d-flex justify-content-center mt-4">
+                              <button
+                                class="funnel-btn"
+                                onclick="validateEmail()"
+                              >
+                                Next
+                              </button>
+                            </div>
+                          </div>
+                          <div
+                            class="d-flex justify-content-between align-items-center mb-2"
+                          >
+                            <a
+                              href="javascript:void(0)"
+                              class="text-decoration-none text-primary"
+                              onclick="prevStep()"
+                              >← Back</a
+                            >
+                            <div
+                              class="d-flex justify-content-center align-items-center"
+                            >
+                              <img src="images/lock.png" height="20" alt="" />
+                              <p class="d-block text-muted text-center mt-3">
+                                Privacy & Security Guaranteed
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step">
                         <div class="spacing">
                           <div>
                             <h2 class="text-center">
                               What's your phone number?
                             </h2>
                             <div class="d-flex justify-content-center mt-3">
-                              <!-- <input
+                              <input
                                 type="number"
                                 placeholder="Enter Your Phone Number"
+                                id="country_code"
                                 class="form-control"
-                              /> -->
-                              <input type="number" placeholder="Enter Your Phone Number" style="padding-left: 89px;" id="country_code" class="form-control">
+                              />
                             </div>
                             <div class="d-flex justify-content-center mt-4">
                               <button class="funnel-btn" onclick="nextStep()">
@@ -2499,37 +2463,6 @@
                         </div>
                       </div>
                       <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
-                            </div>
-                          </div>
-                        </div>
                         <div class="spacing">
                           <div>
                             <h2 class="text-center">
@@ -2542,11 +2475,11 @@
                                 class="form-control"
                               />
                             </div>
-                            <!-- <div class="d-flex justify-content-center mt-4">
-                              <button class="funnel-btn" onclick="nextStep()">
-                                Next
+                            <div class="d-flex justify-content-center mt-4">
+                              <button class="funnel-btn">
+                                See Available Developers
                               </button>
-                            </div> -->
+                            </div>
                           </div>
                           <div
                             class="d-flex justify-content-between align-items-center mb-2"
@@ -2568,255 +2501,6 @@
                           </div>
                         </div>
                       </div>
-                      <!-- <div class="step">
-                        <div class="d-flex justify-content-center">
-                          <div class="progress-completion">
-                            <span class="text-muted me-2">Completion</span>
-                            <div class="lp-completion__progress-meter">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 34 34"
-                              >
-                                <circle
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-bar"
-                                ></circle>
-                                <circle
-                                  id="js-countdown__progress"
-                                  cx="17"
-                                  cy="17"
-                                  r="15.5"
-                                  class="progress-meter-progress js-countdown__progress"
-                                  style="
-                                    visibility: visible;
-                                    stroke-dashoffset: 100px;
-                                  "
-                                  stroke-linecap="round"
-                                ></circle>
-                              </svg>
-                              <span class="lp-completion-rate"></span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="spacing">
-                          <div>
-                            <h2 class="text-center">Select Your Country</h2>
-                            <div class="d-flex justify-content-center mt-3">
-                              <select
-                                id="country"
-                                class="form-select form-control js-select2"
-                              >
-                                <option value="">-- Select Country --</option>
-                                <option value="Afghanistan">Afghanistan</option>
-                                <option value="Albania">Albania</option>
-                                <option value="Algeria">Algeria</option>
-                                <option value="Andorra">Andorra</option>
-                                <option value="Angola">Angola</option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Armenia">Armenia</option>
-                                <option value="Australia">Australia</option>
-                                <option value="Austria">Austria</option>
-                                <option value="Azerbaijan">Azerbaijan</option>
-                                <option value="Bahamas">Bahamas</option>
-                                <option value="Bahrain">Bahrain</option>
-                                <option value="Bangladesh">Bangladesh</option>
-                                <option value="Belarus">Belarus</option>
-                                <option value="Belgium">Belgium</option>
-                                <option value="Belize">Belize</option>
-                                <option value="Benin">Benin</option>
-                                <option value="Bhutan">Bhutan</option>
-                                <option value="Bolivia">Bolivia</option>
-                                <option value="Bosnia and Herzegovina">
-                                  Bosnia and Herzegovina
-                                </option>
-                                <option value="Botswana">Botswana</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="Brunei">Brunei</option>
-                                <option value="Bulgaria">Bulgaria</option>
-                                <option value="Burkina Faso">
-                                  Burkina Faso
-                                </option>
-                                <option value="Burundi">Burundi</option>
-                                <option value="Cambodia">Cambodia</option>
-                                <option value="Cameroon">Cameroon</option>
-                                <option value="Canada">Canada</option>
-                                <option value="Chad">Chad</option>
-                                <option value="Chile">Chile</option>
-                                <option value="China">China</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="Congo">Congo</option>
-                                <option value="Costa Rica">Costa Rica</option>
-                                <option value="Croatia">Croatia</option>
-                                <option value="Cuba">Cuba</option>
-                                <option value="Cyprus">Cyprus</option>
-                                <option value="Czech Republic">
-                                  Czech Republic
-                                </option>
-                                <option value="Denmark">Denmark</option>
-                                <option value="Dominican Republic">
-                                  Dominican Republic
-                                </option>
-                                <option value="Ecuador">Ecuador</option>
-                                <option value="Egypt">Egypt</option>
-                                <option value="El Salvador">El Salvador</option>
-                                <option value="Estonia">Estonia</option>
-                                <option value="Ethiopia">Ethiopia</option>
-                                <option value="Fiji">Fiji</option>
-                                <option value="Finland">Finland</option>
-                                <option value="France">France</option>
-                                <option value="Gabon">Gabon</option>
-                                <option value="Gambia">Gambia</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Germany">Germany</option>
-                                <option value="Ghana">Ghana</option>
-                                <option value="Greece">Greece</option>
-                                <option value="Guatemala">Guatemala</option>
-                                <option value="Honduras">Honduras</option>
-                                <option value="Hungary">Hungary</option>
-                                <option value="Iceland">Iceland</option>
-                                <option value="India">India</option>
-                                <option value="Indonesia">Indonesia</option>
-                                <option value="Iran">Iran</option>
-                                <option value="Iraq">Iraq</option>
-                                <option value="Ireland">Ireland</option>
-                                <option value="Israel">Israel</option>
-                                <option value="Italy">Italy</option>
-                                <option value="Jamaica">Jamaica</option>
-                                <option value="Japan">Japan</option>
-                                <option value="Jordan">Jordan</option>
-                                <option value="Kazakhstan">Kazakhstan</option>
-                                <option value="Kenya">Kenya</option>
-                                <option value="Kuwait">Kuwait</option>
-                                <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                <option value="Laos">Laos</option>
-                                <option value="Latvia">Latvia</option>
-                                <option value="Lebanon">Lebanon</option>
-                                <option value="Lesotho">Lesotho</option>
-                                <option value="Liberia">Liberia</option>
-                                <option value="Libya">Libya</option>
-                                <option value="Lithuania">Lithuania</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Madagascar">Madagascar</option>
-                                <option value="Malawi">Malawi</option>
-                                <option value="Malaysia">Malaysia</option>
-                                <option value="Maldives">Maldives</option>
-                                <option value="Mali">Mali</option>
-                                <option value="Malta">Malta</option>
-                                <option value="Mauritania">Mauritania</option>
-                                <option value="Mauritius">Mauritius</option>
-                                <option value="Mexico">Mexico</option>
-                                <option value="Moldova">Moldova</option>
-                                <option value="Monaco">Monaco</option>
-                                <option value="Mongolia">Mongolia</option>
-                                <option value="Montenegro">Montenegro</option>
-                                <option value="Morocco">Morocco</option>
-                                <option value="Mozambique">Mozambique</option>
-                                <option value="Myanmar">Myanmar</option>
-                                <option value="Namibia">Namibia</option>
-                                <option value="Nepal">Nepal</option>
-                                <option value="Netherlands">Netherlands</option>
-                                <option value="New Zealand">New Zealand</option>
-                                <option value="Nicaragua">Nicaragua</option>
-                                <option value="Niger">Niger</option>
-                                <option value="Nigeria">Nigeria</option>
-                                <option value="North Korea">North Korea</option>
-                                <option value="North Macedonia">
-                                  North Macedonia
-                                </option>
-                                <option value="Norway">Norway</option>
-                                <option value="Oman">Oman</option>
-                                <option value="Pakistan">Pakistan</option>
-                                <option value="Panama">Panama</option>
-                                <option value="Paraguay">Paraguay</option>
-                                <option value="Peru">Peru</option>
-                                <option value="Philippines">Philippines</option>
-                                <option value="Poland">Poland</option>
-                                <option value="Portugal">Portugal</option>
-                                <option value="Qatar">Qatar</option>
-                                <option value="Romania">Romania</option>
-                                <option value="Russia">Russia</option>
-                                <option value="Rwanda">Rwanda</option>
-                                <option value="Saudi Arabia">
-                                  Saudi Arabia
-                                </option>
-                                <option value="Senegal">Senegal</option>
-                                <option value="Serbia">Serbia</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Slovakia">Slovakia</option>
-                                <option value="Slovenia">Slovenia</option>
-                                <option value="Somalia">Somalia</option>
-                                <option value="South Africa">
-                                  South Africa
-                                </option>
-                                <option value="South Korea">South Korea</option>
-                                <option value="Spain">Spain</option>
-                                <option value="Sri Lanka">Sri Lanka</option>
-                                <option value="Sudan">Sudan</option>
-                                <option value="Suriname">Suriname</option>
-                                <option value="Sweden">Sweden</option>
-                                <option value="Switzerland">Switzerland</option>
-                                <option value="Syria">Syria</option>
-                                <option value="Taiwan">Taiwan</option>
-                                <option value="Tajikistan">Tajikistan</option>
-                                <option value="Tanzania">Tanzania</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Togo">Togo</option>
-                                <option value="Trinidad and Tobago">
-                                  Trinidad and Tobago
-                                </option>
-                                <option value="Tunisia">Tunisia</option>
-                                <option value="Turkey">Turkey</option>
-                                <option value="Turkmenistan">
-                                  Turkmenistan
-                                </option>
-                                <option value="Uganda">Uganda</option>
-                                <option value="Ukraine">Ukraine</option>
-                                <option value="United Arab Emirates">
-                                  United Arab Emirates
-                                </option>
-                                <option value="United Kingdom">
-                                  United Kingdom
-                                </option>
-                                <option value="United States">
-                                  United States
-                                </option>
-                                <option value="Uruguay">Uruguay</option>
-                                <option value="Uzbekistan">Uzbekistan</option>
-                                <option value="Venezuela">Venezuela</option>
-                                <option value="Vietnam">Vietnam</option>
-                                <option value="Yemen">Yemen</option>
-                                <option value="Zambia">Zambia</option>
-                                <option value="Zimbabwe">Zimbabwe</option>
-                              </select>
-                            </div>
-                            <div class="d-flex justify-content-center mt-4">
-                              <button class="funnel-btn" onclick="nextStep()">
-                                Next
-                              </button>
-                            </div>
-                          </div>
-                          <div
-                            class="d-flex justify-content-between align-items-center mb-2"
-                          >
-                            <a
-                              href="javascript:void(0)"
-                              class="text-decoration-none text-primary"
-                              onclick="prevStep()"
-                              >← Back</a
-                            >
-                            <div
-                              class="d-flex justify-content-center align-items-center"
-                            >
-                              <img src="images/lock.png" height="20" alt="" />
-                              <p class="d-block text-muted text-center mt-3">
-                                Privacy & Security Guaranteed
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div> -->
                     </form>
                   </div>
                 </div>
@@ -2884,7 +2568,6 @@
         const steps = document.querySelectorAll(".step");
         const totalSteps = steps.length;
         const percentage = Math.round((currentStep / (totalSteps - 1)) * 100);
-
         const radius = 15.5;
         const circumference = 2 * Math.PI * radius;
         const offset = circumference - (percentage / 100) * circumference;
@@ -2984,11 +2667,48 @@
           document.getElementById("monthlyCustomInput").style.display = "block";
         }
       }
+      function validateName() {
+        const nameInput = document.getElementById("fullName");
+        const nameError = document.getElementById("nameError");
+        const name = nameInput.value.trim();
+
+        // Check if name has at least 2 words (first and last name)
+        if (name === "" || name.split(" ").length < 2) {
+          nameError.style.display = "block";
+          nameInput.focus();
+          return false;
+        }
+
+        nameError.style.display = "none";
+        nextStep(); // Proceed to next step if validation passes
+        return true;
+      }
+
+      function validateEmail() {
+        const emailInput = document.getElementById("emailAddress");
+        const emailError = document.getElementById("emailError");
+        const email = emailInput.value.trim();
+
+        // Simple email regex validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailRegex.test(email)) {
+          emailError.style.display = "block";
+          emailInput.focus();
+          return false;
+        }
+
+        emailError.style.display = "none";
+        nextStep(); // Proceed to next step if validation passes
+        return true;
+      }
+
       document.addEventListener("DOMContentLoaded", function () {
         window.intlTelInput(document.getElementById("country_code"), {
-          initialCountry: "in",
+          initialCountry: "us",
           separateDialCode: true,
-          utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"
+          utilsScript:
+            "https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js",
         });
       });
     </script>

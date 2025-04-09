@@ -371,7 +371,7 @@ ul {
   padding: 10px;
 }
 .modal-content .modal-body {
-  height: 650px;
+  height: 670px;
 }
 
 .popup-title h3 {
@@ -397,6 +397,10 @@ ul {
 
 .popup-wrapper .right-content {
   max-width: 100%;
+}
+.funnel {
+  height: 560px;
+  overflow-y: hidden;
 }
 .funnel-btn {
   color: #fff;
@@ -426,7 +430,6 @@ ul {
 }
 .form-label {
   color: #489351;
-  /* font-size: 14px; */
 }
 .form-control {
   padding: 12px !important;
@@ -479,7 +482,6 @@ ul {
   transform-origin: center;
   transition: stroke-dashoffset 0.4s ease;
 }
-
 
 .funnel .lp-completion-rate {
   color: #489351;
@@ -537,6 +539,7 @@ ul {
 }
 .hourly-radio h3::before,
 .monthly-radio h3::before {
+  cursor: pointer;
   content: "";
   display: inline-block;
   width: 20px;
@@ -586,13 +589,15 @@ ul {
   color: #fff;
   transition: all 0.3s ease;
 }
-.iti input.iti__tel-input, .iti input.iti__tel-input[type=text], .iti input.iti__tel-input[type=tel] {
+.iti input.iti__tel-input,
+.iti input.iti__tel-input[type="text"],
+.iti input.iti__tel-input[type="tel"] {
   padding-left: 89px !important;
 }
-.iti__search-input{
+.iti__search-input {
   padding: 10px !important;
 }
-.iti{
+.iti {
   width: 400px !important;
 }
 .step .third-step-wrapper {
