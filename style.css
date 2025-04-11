@@ -440,6 +440,10 @@ ul {
   max-width: 400px !important;
   width: 100% !important;
 }
+.form-control:focus {
+  border-color: #489351 !important;
+  box-shadow:0 0 0 .25rem #41aa1442 !important
+}
 
 .funnel .progress-completion {
   display: flex;
@@ -626,17 +630,30 @@ ul {
   }
 }
 .team-card {
+  position: relative;
   background: #f2f3f7;
   border-radius: 10px;
   box-shadow: -10px -10px 20px 0px #f7f7f7, 10px 10px 20px 0px #d7e0e8;
   text-align: center;
   padding: 50px 20px;
 }
+.experience-badge {
+  border-radius: 10px 0 10px 0px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  background-color: #489351;
+  color: #fff;
+  padding: 12px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 .team-card .memberPhoto {
   display: inline-block;
   height: auto;
   max-width: 100%;
-  width: 270px;
+  width: 210px;
   margin: 0px 0px 20px 0px;
   border-radius: 50%;
 }
@@ -655,10 +672,6 @@ ul {
   font-size: 20px;
   color: #677592;
   font-weight: 400;
-}
-.memberDetails .expertise {
-  font-size: 18px;
-  text-align: start;
 }
 .btn-hire-me {
   cursor: pointer;
@@ -685,10 +698,12 @@ ul {
   border: 1px solid #cbd5e0;
   border-radius: 9999px;
   font-size: 14px;
-  font-family: Arial, sans-serif;
   color: #2d3748;
   background-color: #f7fafc;
   white-space: nowrap;
+}
+.experience-text {
+  margin: 10px 0;
 }
 .footer-bg {
   background: #489351 !important;
