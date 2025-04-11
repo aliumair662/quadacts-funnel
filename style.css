@@ -414,6 +414,10 @@ ul {
   border-radius: 40px;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
+.funnel-btn a {
+  text-decoration: none;
+  color: #489351;
+}
 .funnel-btn:hover {
   color: #489351;
   border-color: #489351;
@@ -621,7 +625,71 @@ ul {
     opacity: 1;
   }
 }
+.team-card {
+  background: #f2f3f7;
+  border-radius: 10px;
+  box-shadow: -10px -10px 20px 0px #f7f7f7, 10px 10px 20px 0px #d7e0e8;
+  text-align: center;
+  padding: 50px 20px;
+}
+.team-card .memberPhoto {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  width: 270px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 50%;
+}
+.memberDetails .memberName {
+  font-weight: 600;
+  font-size: 24px;
+  font-style: normal;
+  color: #32285c;
+  text-transform: none;
+  text-decoration: auto;
+  line-height: 135%;
+  letter-spacing: 0px;
+  margin: 0px 0px 10px 0px;
+}
+.memberDetails .memberTitle {
+  font-size: 20px;
+  color: #677592;
+  font-weight: 400;
+}
+.memberDetails .expertise {
+  font-size: 18px;
+  text-align: start;
+}
+.btn-hire-me {
+  cursor: pointer;
+  padding: 15px 40px;
+  background-color: #489351;
+  border: none;
+  color: white;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.btn-hire-me:hover {
+  transform: scale(1.1);
+}
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
+.tag {
+  padding: 6px 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  color: #2d3748;
+  background-color: #f7fafc;
+  white-space: nowrap;
+}
 .footer-bg {
   background: #489351 !important;
 }
